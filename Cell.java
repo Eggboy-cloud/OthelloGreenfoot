@@ -1,9 +1,8 @@
     import greenfoot.*;    
     public class Cell extends Graphics
     {
-        
-        public int x;
-        public int y;
+      public int x; // X cordinate
+      public int y; // y cordinate
         
     public Cell(int x,int y)
     {
