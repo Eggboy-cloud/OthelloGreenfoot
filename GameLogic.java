@@ -38,15 +38,14 @@ public class GameLogic
         gameBoard[(side/2)][(side/2)] = new GamePiece(true);
     }
     
-    public boolean setPiece(Pointer direction,GamePiece piece)
+    public boolean setPiece(int row, int col, Pointer direction,GamePiece piece)
     {
-        int row = piece.getX() + direction.horizontal;
-        int col = piece.getY() + direction.vertical;
         if(gameBoard[piece.getX()+row][piece.getY()+col] != piece)
         {
             row = row + direction.horizontal;
             col = col + direction.vertical;
             gameBoard[piece.getX()+row][piece.getY()+col] = piece;
+            setPiece(row, col, direction, piece);
         }
         else
             return true;
@@ -69,7 +68,9 @@ public class GameLogic
                     {    
                         if(hasOtherPieces)
                         {
-                            if(setPiece(oneDir,piece))
+                            row = piece.getX() + oneDir.horizontal;
+                            col = piece.getY() + oneDir.vertical;
+                            if(setPiece(row,col,oneDir,piece))
                                 break;
                         }   
                         break;
