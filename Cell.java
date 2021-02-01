@@ -1,13 +1,9 @@
-    import greenfoot.*;
-    
-    public class Cell extends Actor
+    import greenfoot.*;    
+    public class Cell extends Graphics
     {
         
         public int x;
         public int y;
-    //    GreenfootImage black = new GreenfootImage("black.gif");
-    //    GreenfootImage image = black.getImages();
-    //    image.scale(30,30);
         
     public Cell(int x,int y)
     {
