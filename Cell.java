@@ -3,11 +3,8 @@
     public class Cell extends Actor
     {
         
-        public int x;
-        public int y;
-    //    GreenfootImage black = new GreenfootImage("black.gif");
-    //    GreenfootImage image = black.getImages();
-    //    image.scale(30,30);
+        public int x; // X cordinate
+        public int y; // y cordinate
         
     public Cell(int x,int y)
     {
