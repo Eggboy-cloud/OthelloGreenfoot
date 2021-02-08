@@ -1,7 +1,17 @@
 #BlueJ class context
 comment0.target=GameLogic
-comment1.params=
-comment1.target=void\ setWorld()
-comment2.params=x\ y
-comment2.target=void\ setPiece(int,\ int)
-numComments=3
+comment1.params=currentPlayer
+comment1.target=GameLogic(boolean)
+comment2.params=
+comment2.target=GameLogic()
+comment3.params=coord
+comment3.target=boolean\ restriction(int)
+comment4.params=
+comment4.target=void\ setWorld()
+comment5.params=row\ col\ direction\ piece
+comment5.target=boolean\ setPiece(int,\ int,\ Pointer,\ GamePiece)
+comment6.params=x\ y
+comment6.target=void\ playPiece(int,\ int)
+comment7.params=piece
+comment7.target=boolean\ playable(GamePiece)
+numComments=8

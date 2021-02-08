@@ -42,5 +42,11 @@ public class OthelloWorld extends World
                     addObject(cellList[x][y], x * IMAGE_LENGTH_ + xStartLocation, y * IMAGE_LENGTH_ + yStartLocation);
                 }
             }
+            
+        cellList[3][4].setWhite();
+        cellList[3][3].setBlack();        
+        cellList[4][4].setBlack();
+        cellList[4][3].setWhite();  
+        
     }
 }
