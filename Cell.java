@@ -12,7 +12,11 @@
     
     public void act() 
     {
-    
+        if(Greenfoot.mouseClicked(this))
+        {
+            OthelloWorld world = (OthelloWorld)getWorld();
+            world.updateWorld((getX()-47)/55,((getY()-47)-55));
+        }
     }
     
     public void setBlack()

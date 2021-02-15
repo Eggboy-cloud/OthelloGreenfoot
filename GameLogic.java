@@ -42,9 +42,9 @@ public class GameLogic
     {
         if(gameBoard[piece.getX()+row][piece.getY()+col] != piece)
         {
+            gameBoard[piece.getX()+row][piece.getY()+col] = piece;
             row = row + direction.horizontal;
             col = col + direction.vertical;
-            gameBoard[piece.getX()+row][piece.getY()+col] = piece;
             setPiece(row, col, direction, piece);
         }
         else
@@ -63,11 +63,15 @@ public class GameLogic
                {
                     boolean hasOtherPieces = false;
                     if(gameBoard[row][col]==null)
+                    {
+                        System.out.println("null");
                         break;
+                    }
                     else if(piece.player==gameBoard[row][col].player)
                     {    
                         if(hasOtherPieces)
                         {
+                            System.out.println("Samma");
                             row = piece.getX() + oneDir.horizontal;
                             col = piece.getY() + oneDir.vertical;
                             if(setPiece(row,col,oneDir,piece))
@@ -77,6 +81,7 @@ public class GameLogic
                     }
                     else
                     {    
+                        System.out.println("Olik");
                         hasOtherPieces = true;
                         continue;
                     }
