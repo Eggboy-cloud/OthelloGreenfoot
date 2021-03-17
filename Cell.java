@@ -3,7 +3,7 @@
     {
       public int x; // X cordinate
       public int y; // y cordinate
-        
+
     public Cell(int x,int y)
     {
         x = this.x;
@@ -12,16 +12,16 @@
     
     public void act() 
     {
-        if(Greenfoot.mouseClicked(this))
-        {
-            OthelloWorld world = (OthelloWorld)getWorld();
-            world.updateWorld((getX()-47)/55,((getY()-47)-55));
+        if(Greenfoot.mouseClicked(this)){
+            OthelloWorld world = (OthelloWorld)getWorld();  
+            System.out.println("X Coord: " + (getX()-47)/55 + " Y Coord: " +(getY()-47)/55);
+            world.play( ((getX()-47)/55),((getY()-47)/55));
         }
     }
     
     public void setBlack()
     {
-        GreenfootImage black = new GreenfootImage("black.gif");
+        GreenfootImage black = new GreenfootImage("black.png");
         black.scale(50,50);
         setImage(black);
     }

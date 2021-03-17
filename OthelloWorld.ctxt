@@ -1,10 +1,11 @@
 #BlueJ class context
 comment0.target=OthelloWorld
-comment0.text=\r\n\ Contains\ the\ Code\ for\ the\ Gameboard\r\n\ \r\n\ @Egil\ Guting\ \r\n\ @2021-18-01\r\n
 comment1.params=
 comment1.target=OthelloWorld()
 comment2.params=
 comment2.target=void\ constructBoard()
 comment3.params=x\ y
-comment3.target=void\ updateWorld(int,\ int)
-numComments=4
+comment3.target=void\ play(int,\ int)
+comment4.params=x\ y
+comment4.target=void\ updateWorld(int,\ int)
+numComments=5
