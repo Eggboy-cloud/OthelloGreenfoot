@@ -3,7 +3,7 @@
     {
       public int x; // X cordinate
       public int y; // y cordinate
-      OthelloWorld world = (OthelloWorld)getWorld();  
+
     public Cell(int x,int y)
     {
         x = this.x;
@@ -13,8 +13,9 @@
     public void act() 
     {
         if(Greenfoot.mouseClicked(this)){
+            OthelloWorld world = (OthelloWorld)getWorld();  
             System.out.println("X Coord: " + (getX()-47)/55 + " Y Coord: " +(getY()-47)/55);
-            world.play( ((getX()-47)/55),((getY()-47)/55),true);
+            world.play( ((getX()-47)/55),((getY()-47)/55));
         }
     }
     
