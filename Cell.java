@@ -1,5 +1,5 @@
     import greenfoot.*;    
-    public class Cell extends Graphics
+    public class Cell extends Actor
     {
       public int x; // X cordinate
       public int y; // y cordinate
