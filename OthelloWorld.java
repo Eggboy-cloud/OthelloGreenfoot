@@ -16,7 +16,8 @@ public class OthelloWorld extends World
     private Cell[][] cellList = new Cell[8][8]; //Contains all positions on the board, empty, black or white.
     public OthelloWorld()
     {  
-        super(StandardSideLength * ImageLength + HorizontalMargin * 2, StandardSideLength * ImageLength + VerticalMargin * 2, 1);
+        super(StandardSideLength * ImageLength + HorizontalMargin * 2+100, StandardSideLength * ImageLength + VerticalMargin * 2, 1);
+        updatePoints();
         constructBoard();
     }
     
@@ -47,7 +48,8 @@ public class OthelloWorld extends World
     
     public void play(int x, int y)
     {
-        gameRule.playPiece(x,y);
+        gameRule.playPiece(x,y,black);
+        updatePoints();
         for (int row = 0; row<=7;row++)
         {
             for(int col = 0; col<=7;col++)
@@ -63,8 +65,8 @@ public class OthelloWorld extends World
         }
     }
     
-    public void updateWorld(int x,int y)
+    public void updatePoints()
     {
-        
+         addObject(new Graphics(new GreenfootImage("Points", 20, Color.BLACK, null), false), StandardSideLength * ImageLength + HorizontalMargin * 2+50, 30);
     }
 }

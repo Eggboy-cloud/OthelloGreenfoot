@@ -54,7 +54,7 @@
         return true;
     }
     
-    public void playPiece(int x,int y)
+    public void playPiece(int x,int y,boolean player)
     {
        GamePiece piece = new GamePiece(player,x,y);
        if(playable(piece))

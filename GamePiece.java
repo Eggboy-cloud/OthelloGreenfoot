@@ -1,7 +1,8 @@
-public class GamePiece extends GameLogic
+public class GamePiece
 {
     private int x;
     private int y;
+    public boolean player;
     
     public GamePiece(boolean player)
     {
