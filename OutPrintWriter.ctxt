@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=OutPrintWriter
+comment1.params=out\ id
+comment1.target=OutPrintWriter(java.io.PrintWriter,\ java.lang.String)
+numComments=2
