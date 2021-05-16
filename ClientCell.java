@@ -14,7 +14,7 @@ public class ClientCell extends Actor
     public void act () 
     {
         if(Greenfoot.mouseClicked(this)){
-            ChatClient world = (ChatClient)getWorld();
+            OthelloClient world = (OthelloClient)getWorld();
             world.play(((getX()-47)/55),((getY()-47)/55)); }
     }
 

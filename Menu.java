@@ -33,7 +33,7 @@ public class Menu extends World
         
         if( Greenfoot.mouseClicked(local) )
         {
-            Greenfoot.setWorld(new ChatClient());
+            Greenfoot.setWorld(new OthelloClient());
         }
     }
 }

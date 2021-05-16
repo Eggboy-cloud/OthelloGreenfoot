@@ -30,7 +30,7 @@ import org.json.JSONObject;
  * server. When the server sends a line beginning with "MESSAGE " then all characters
  * following this string should be displayed in its message area.
  */
-public class ChatClient extends World {
+public class OthelloClient extends World {
 
     public static final int StandardSideLength = 8;
     public static final int ImageLength = 55;
@@ -51,7 +51,7 @@ public class ChatClient extends World {
      * only becomes editable AFTER the client receives the NAMEACCEPTED message from
      * the server.
      */
-    public ChatClient()  {
+    public OthelloClient()  {
         super(StandardSideLength * ImageLength + HorizontalMargin * 2, StandardSideLength * ImageLength + VerticalMargin * 2, 1);
         try{
             constructBoard();
@@ -230,7 +230,7 @@ public class ChatClient extends World {
      */
     public static void main(){
         try{
-            ChatClient client = new ChatClient();
+            OthelloClient client = new OthelloClient();
             client.run();
         }
         catch(Exception e){
