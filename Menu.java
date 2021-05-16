@@ -3,7 +3,7 @@ public class Menu extends World
 {
     // instance variables - replace the example below with your own
     private Graphics solo;
-    
+    private Graphics local;
 
     /**
      * Constructor for objects of class Menu
@@ -19,6 +19,9 @@ public class Menu extends World
         
         solo = new Graphics(new GreenfootImage("Play Game", 50, Color.BLACK, null), false );
         addObject(solo, halfX, halfY + 50);
+        
+        local = new Graphics(new GreenfootImage("Online Local", 50, Color.BLACK, null), false );
+        addObject(local, halfX, halfY + 120);
     }
     
         public void act()
@@ -26,6 +29,11 @@ public class Menu extends World
         if( Greenfoot.mouseClicked(solo) )
         {
             Greenfoot.setWorld(new OthelloWorld());
+        }
+        
+        if( Greenfoot.mouseClicked(local) )
+        {
+            Greenfoot.setWorld(new ChatClient());
         }
     }
 }
